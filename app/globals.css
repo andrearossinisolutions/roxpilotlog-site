@@ -1,4 +1,4 @@
-:root { --bg:#0b1522; --panel:#132235; --text:#e8eef6; --muted:#9db0c6; --accent:#ff8a3d; --line:#1f3550; }
+:root { --bg:#0b1522; --panel:#132235; --text:#e8eef6; --muted:#9db0c6; --accent:#ff8a3d; --grad:linear-gradient(135deg,#8b5fbf,#ff6b6b 50%,#ffb347); --line:#1f3550; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height:1.6; }
@@ -31,3 +31,16 @@ h2 { font-size:1.8rem; margin:0 0 8px; }
 .podcast iframe { width:100%; border:0; border-radius:14px; }
 footer { padding-top:48px; padding-bottom:40px; color:var(--muted); font-size:.9rem; }
 @media (max-width:720px) { .podcast { grid-template-columns:1fr; } .nav nav { gap:12px; font-size:.85rem; } }
+
+.logo { display:flex; align-items:center; gap:8px; } .logo img { width:40px; height:40px; object-fit:contain; }
+.hero { display:grid; grid-template-columns:1.2fr 1fr; gap:32px; align-items:center; }
+.hero-logo { width:100%; height:auto; filter:drop-shadow(0 10px 40px rgba(255,107,107,.25)); }
+h1 { background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.btn.primary { background:var(--grad); border:0; color:#1a1006; }
+@media (max-width:720px) { .hero { grid-template-columns:1fr; } .hero-logo { max-width:340px; margin:0 auto; } }
+
+.nav { max-width:none; padding:0; display:block; position:relative; background:linear-gradient(rgba(11,21,34,.55),rgba(11,21,34,.55)), url("/banner.jpg") center center / cover no-repeat; border-bottom:1px solid var(--line); }
+.nav-inner { max-width:1100px; margin:0 auto; padding:36px 20px; display:flex; justify-content:flex-end; }
+.nav nav { color:#fff; font-weight:600; text-shadow:0 1px 6px rgba(0,0,0,.7); }
+.nav nav a:hover { color:var(--accent); }
+@media (max-width:720px) { .nav-inner { justify-content:center; } }

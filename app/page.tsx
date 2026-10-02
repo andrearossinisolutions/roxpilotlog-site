@@ -1,5 +1,6 @@
 import { site } from "@/lib/config";
 import { getChannelVideos, getPlaylistVideos } from "@/lib/youtube";
+import Image from "next/image";
 import VideoGrid from "@/components/VideoGrid";
 
 export const revalidate = 3600;
@@ -14,27 +15,32 @@ export default async function Home() {
   return (
     <>
       <header className="nav">
-        <a href="#top" className="logo">Rox<span>PilotLog</span></a>
-        <nav>
-          <a href="#nuovi">Nuovi video</a>
-          <a href="#pilotlog">PilotLog</a>
-          <a href="#podcast">Podcast</a>
-          <a href="#contatti">Contatti</a>
-        </nav>
+        <div className="nav-inner">
+          <nav>
+            <a href="#nuovi">Nuovi video</a>
+            <a href="#pilotlog">PilotLog</a>
+            <a href="#podcast">Podcast</a>
+            <a href="#contatti">Contatti</a>
+          </nav>
+        </div>
       </header>
 
       <main id="top">
         <section className="hero">
+          <div className="hero-text">
           <p className="eyebrow">Diario di bordo</p>
-          <h1>Volare, raccontato dal posto di destra.</h1>
+          <h1>RoxPilotLog</h1>
           <p className="lead">
-            RoxPilotLog è il mio diario di volo: avventure in aeroplano, consigli per piloti e studenti,
-            e ora anche un podcast per parlarne con calma, sottovento.
+            Pensavo che volare fosse un beneficio per pochi, e poi…
+            Io sono Andrea, benvenuto nel mio video-diario di volo!
+            Dall'esperienza di pilota per un giorno, al mio aereo, ed a tutto quello che verrà... 🛩️☀️
           </p>
           <div className="actions">
             <a className="btn primary" href={site.youtube} target="_blank" rel="noopener noreferrer">Iscriviti su YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Seguimi su Instagram</a>
           </div>
+          </div>
+          <Image className="hero-logo" src="/logo.png" alt="Logo RoxPilotLog" width={900} height={900} priority />
         </section>
 
         <section id="nuovi">
