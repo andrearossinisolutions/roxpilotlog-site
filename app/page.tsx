@@ -18,10 +18,11 @@ export default async function Home() {
       <header className="nav">
         <div className="nav-inner">
           <nav>
-            <a href="#nuovi">Nuovi video</a>
-            <a href="#pilotlog">PilotLog</a>
-            <a href="#podcast">Podcast</a>
-            <a href="#contatti">Contatti</a>
+            <a href="#ultime">Ultime Pubblicazioni</a>
+            <a href="#pilotlog">Il Pilot Log</a>
+            <a href="#podcast">Il Mio Podcast</a>
+            <a href="#campo">Il Campo Volo</a>
+            <a href="#contatti">Contatti e Social</a>
           </nav>
         </div>
       </header>
@@ -44,7 +45,7 @@ export default async function Home() {
           <Image className="hero-logo" src="/logo.png" alt="Logo RoxPilotLog" width={900} height={900} priority />
         </section>
 
-        <section id="nuovi">
+        <section id="ultime">
           <h2>Ultime pubblicazioni</h2>
           <LatestCarousel videos={latest.slice(0, 5)} />
           <a className="more" href={site.youtube} target="_blank" rel="noopener noreferrer">Guarda tutti i video →</a>
@@ -75,6 +76,16 @@ export default async function Home() {
             </div>
           </div>
           {site.podcastPlaylistId && <VideoGrid videos={podcast} emptyMessage="Presto la prima puntata!" />}
+        </section>
+
+        <section id="campo">
+          <p className="eyebrow">Live</p>
+          <h2>Traffico aereo sul campo volo</h2>
+          <p className="muted">Gli aeromobili attorno al mio campo volo in tempo reale, grazie a SafeSky.</p>
+          <div className="live">
+            <iframe src={site.safeskyUrl} title="Traffico aereo in tempo reale (SafeSky)" loading="lazy" allowFullScreen />
+          </div>
+          <a className="more" href={site.safeskyUrl} target="_blank" rel="noopener noreferrer">Apri a schermo intero →</a>
         </section>
 
         <section id="contatti" className="contacts">

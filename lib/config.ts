@@ -4,6 +4,7 @@ export const site = {
   instagram: "https://www.instagram.com/roxpilotlog/",
   spotifyShowId: "1lbtzgmdJ8aFvNBxlDo0Go",
   spotifyUrl: "https://open.spotify.com/show/1lbtzgmdJ8aFvNBxlDo0Go?si=vnZA_sDZSUGqcfwIzCUyeA",
+  safeskyUrl: "https://live-next.safesky.app/tv/FqWmtvIOeoo6Kf8tMa1tFA",
   channelId: "UCO8OHa7V3ngRAfjzNR25P4g",
   pilotLogPlaylistId: "PLVwu8xWOTXDMzy8DIBlLEr-wYTGGN4EFC",
   // ID della playlist YouTube di "Chiacchiere Sottovento" (https://www.youtube.com/playlist?list=<ID>).
