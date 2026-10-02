@@ -74,7 +74,7 @@ export default async function Home() {
               )}
             </div>
           </div>
-          {site.podcastPlaylistId && <VideoGrid videos={podcast} />}
+          {site.podcastPlaylistId && <VideoGrid videos={podcast} emptyMessage="Presto la prima puntata!" />}
         </section>
 
         <section id="contatti" className="contacts">

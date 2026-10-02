@@ -1,7 +1,7 @@
 import type { Video } from "@/lib/youtube";
 
-export default function VideoGrid({ videos }: { videos: Video[] }) {
-  if (!videos.length) return <p className="muted">Video non disponibili al momento. Guardali direttamente su YouTube.</p>;
+export default function VideoGrid({ videos, emptyMessage = "Video non disponibili al momento. Guardali direttamente su YouTube." }: { videos: Video[]; emptyMessage?: string }) {
+  if (!videos.length) return <p className="muted">{emptyMessage}</p>;
   return (
     <div className="grid">
       {videos.map((v) => (
