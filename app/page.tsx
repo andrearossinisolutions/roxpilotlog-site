@@ -2,6 +2,7 @@ import { site } from "@/lib/config";
 import { getChannelVideos, getPlaylistVideos } from "@/lib/youtube";
 import Image from "next/image";
 import VideoGrid from "@/components/VideoGrid";
+import LatestCarousel from "@/components/LatestCarousel";
 
 export const revalidate = 3600;
 
@@ -44,12 +45,13 @@ export default async function Home() {
         </section>
 
         <section id="nuovi">
-          <h2>Nuovi video</h2>
-          <VideoGrid videos={latest} />
+          <h2>Ultime pubblicazioni</h2>
+          <LatestCarousel videos={latest.slice(0, 5)} />
+          <a className="more" href={site.youtube} target="_blank" rel="noopener noreferrer">Guarda tutti i video →</a>
         </section>
 
         <section id="pilotlog">
-          <h2>Playlist PilotLog</h2>
+          <h2>Pilot Log</h2>
           <p className="muted">I miei voli, dall&apos;inizio. Una puntata dopo l&apos;altra.</p>
           <VideoGrid videos={pilotLog} />
           <a className="more" href={`https://www.youtube.com/playlist?list=${site.pilotLogPlaylistId}`} target="_blank" rel="noopener noreferrer">Guarda tutta la playlist →</a>
@@ -58,7 +60,7 @@ export default async function Home() {
         <section id="podcast">
           <p className="eyebrow">Nuovo podcast</p>
           <h2>Chiacchiere Sottovento</h2>
-          <p className="muted">Storie, pensieri e due chiacchiere sul volo. Ascoltalo su Spotify o guardalo su YouTube.</p>
+          <p className="muted">🛩️ Parliamo di attualità aeronautica direttamente dal campo volo mentre ci teniamo allenati con l'aereo, con l'obiettivo di cercare di capire insieme cosa possiamo portarci a casa da quello che succede nel mondo del volo, e che possa essere utile anche a noi piloti di piccoli aerei leggeri, o come nel mio caso addirittura ultraleggeri. 🛬</p>
           <div className="podcast">
             <iframe
               title="Chiacchiere Sottovento su Spotify"

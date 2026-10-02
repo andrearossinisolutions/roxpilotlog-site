@@ -44,3 +44,18 @@ h1 { background:var(--grad); -webkit-background-clip:text; background-clip:text;
 .nav nav { color:#fff; font-weight:600; text-shadow:0 1px 6px rgba(0,0,0,.7); }
 .nav nav a:hover { color:var(--accent); }
 @media (max-width:720px) { .nav-inner { justify-content:center; } }
+
+.spotlight { display:flex; gap:12px; align-items:flex-start; }
+.spot { flex:1 1 0; min-width:0; cursor:pointer; transition:flex .5s ease; border-radius:14px; overflow:hidden; background:var(--panel); border:1px solid var(--line); }
+.spot.on { flex:3 1 0; cursor:default; border-color:var(--accent); box-shadow:0 12px 40px rgba(255,107,107,.2); }
+.spot-media { aspect-ratio:1/1; position:relative; }
+.spot:not(.on) .spot-media { aspect-ratio:9/16; max-height:340px; opacity:.7; }
+.spot:not(.on):hover .spot-media { opacity:1; }
+.spot-media iframe { background:#000; }
+.spot-media img, .spot-media iframe { width:100%; height:100%; object-fit:cover; border:0; display:block; }
+.spot-info { padding:12px 14px 0; }
+.spot-info h3 { font-size:1rem; margin:0 0 10px; }
+.bar { height:3px; background:var(--grad); transform-origin:left; animation:fill linear forwards; margin:0 -14px; }
+@keyframes fill { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+@media (max-width:720px) { .spotlight { flex-direction:column; } .spot { width:100%; flex:none; } .spot:not(.on) .spot-media { aspect-ratio:16/4; max-height:none; } }
+.spot-info h3 a:hover { color:var(--accent); text-decoration:underline; }
