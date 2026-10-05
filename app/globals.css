@@ -99,9 +99,11 @@ section[id], main#top { scroll-margin-top:16px; }
 .side-progress .on .sp-dot { background:var(--accent); border-color:var(--accent); transform:scale(1.5); box-shadow:0 0 0 4px rgba(255,138,61,.25); }
 .sp-label { font-size:.8rem; font-weight:600; padding:3px 10px; border-radius:999px; background:rgba(11,21,34,.85); border:1px solid var(--line); white-space:nowrap; opacity:0; transform:translateX(6px); transition:.2s; pointer-events:none; }
 .side-progress li:not(.past) .sp-label, .side-progress li a:hover .sp-label { opacity:1; transform:none; }
-.sp-next { display:flex; flex-direction:column; align-items:center; align-self:center; gap:2px; font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); font-weight:700; transition:opacity .3s; }
+.sp-next { display:flex; justify-content:center; align-self:flex-end; width:11px; color:var(--accent); transition:opacity .3s; }
+.sp-next svg { flex:none; }
 .sp-next svg { animation:sp-bounce 1.4s ease-in-out infinite; }
-.sp-next.hide { opacity:0; pointer-events:none; }
+.sp-next.hide { opacity:.85; }
 @keyframes sp-bounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(5px); } }
 @media (max-width:900px) { .sp-label, .sp-next span { display:none; } .side-progress { right:8px; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .sp-next svg { animation:none; } }
+.side-progress li.on .sp-label { background:linear-gradient(90deg, rgba(255,138,61,.55) var(--p,0%), rgba(11,21,34,.85) var(--p,0%)); border-color:var(--accent); }
