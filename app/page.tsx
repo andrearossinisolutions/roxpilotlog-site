@@ -3,6 +3,7 @@ import { getChannelVideos, getPlaylistVideos } from "@/lib/youtube";
 import Image from "next/image";
 import VideoGrid from "@/components/VideoGrid";
 import LatestCarousel from "@/components/LatestCarousel";
+import SideProgress from "@/components/SideProgress";
 
 export const revalidate = 3600;
 
@@ -29,6 +30,8 @@ export default async function Home() {
         </div>
       </header>
 
+      <SideProgress />
+
       <main id="top">
         <section className="hero">
           <div className="hero-text">
@@ -50,7 +53,7 @@ export default async function Home() {
 
         <section id="voli">
           <h2>I miei voli</h2>
-          <p className="muted">🗺️ Tutte le rotte che ho volato, dal campo volo ai posti più lontani, e quelle che sto già pianificando per il prossimo decollo.</p>
+          <p className="muted">🗺️ <b>Tutte le rotte che ho volato</b>, dal campo volo ai posti più lontani, e quelle che sto già pianificando per il prossimo decollo.</p>
           <div className="legend">
             <span><i className="line done" /> Voli fatti</span>
             <span><i className="line planned" /> Voli pianificati</span>
@@ -77,7 +80,7 @@ export default async function Home() {
 
         <section id="pilotlog">
           <h2>Pilot Log</h2>
-          <p className="muted">🎥 I miei ultimi voli più significativi: paesaggi mozzafiato, e passeggeri speciali. Non perderli!</p>
+          <p className="muted">🎥 <b>I miei ultimi voli</b> più significativi: paesaggi mozzafiato, e passeggeri speciali. Non perderli!</p>
           <VideoGrid videos={pilotLog} />
           <a className="more" href={`https://www.youtube.com/playlist?list=${site.pilotLogPlaylistId}`} target="_blank" rel="noopener noreferrer">Guarda tutta la playlist →</a>
         </section>
@@ -85,7 +88,7 @@ export default async function Home() {
         <section id="podcast">
           <p className="eyebrow">Nuovo podcast</p>
           <h2>Chiacchiere Sottovento</h2>
-          <p className="muted">🛩️ Parliamo di attualità aeronautica direttamente dal campo volo mentre ci teniamo allenati con l'aereo, con l'obiettivo di cercare di capire insieme cosa possiamo portarci a casa da quello che succede nel mondo del volo, e che possa essere utile anche a noi piloti di piccoli aerei leggeri, o come nel mio caso addirittura ultraleggeri. 🛬</p>
+          <p className="muted">🛩️ <b>Parliamo di attualità aeronautica</b> direttamente dal campo volo mentre ci teniamo allenati con l'aereo, con l'obiettivo di cercare di capire insieme cosa possiamo portarci a casa da quello che succede nel mondo del volo, e che possa essere utile anche a noi piloti di piccoli aerei leggeri, o come nel mio caso addirittura ultraleggeri. 🛬</p>
           <div className="podcast">
             <iframe
               title="Chiacchiere Sottovento su Spotify"
@@ -105,7 +108,7 @@ export default async function Home() {
         <section id="campo">
           <p className="eyebrow">Live</p>
           <h2>Traffico aereo sul campo volo</h2>
-          <p className="muted">🛬 Gli aeromobili attorno al mio campo volo in tempo reale, grazie a SafeSky.</p>
+          <p className="muted">🛬 <b>Gli aeromobili attorno al mio campo volo</b> in tempo reale, grazie a SafeSky.</p>
           <div className="live">
             <iframe src={site.safeskyUrl} title="Traffico aereo in tempo reale (SafeSky)" loading="lazy" allowFullScreen />
           </div>
@@ -119,7 +122,7 @@ export default async function Home() {
 
         <section id="progetti">
           <h2>I miei progetti</h2>
-          <p className="muted">🛠️ Strumenti che ho creato per chi vola.</p>
+          <p className="muted">🛠️ <b>Strumenti che ho creato</b> per chi vola.</p>
           <div className="projects">
             {site.projects.map((p) => (
               <a key={p.url} className="project" href={p.url} target="_blank" rel="noopener noreferrer">
@@ -133,7 +136,7 @@ export default async function Home() {
 
         <section id="contatti" className="contacts">
           <h2>Contatti</h2>
-          <p className="muted">📱 Seguimi sui social e scrivimi un messaggio.</p>
+          <p className="muted">📱 <b>Seguimi sui social</b> e scrivimi un messaggio.</p>
           <div className="actions">
             <a className="btn" href={site.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
