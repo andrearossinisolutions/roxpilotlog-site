@@ -62,3 +62,11 @@ h1 { background:var(--grad); -webkit-background-clip:text; background-clip:text;
 .live { margin-top:20px; aspect-ratio:16/9; border-radius:14px; overflow:hidden; border:1px solid var(--line); background:var(--panel); }
 .live iframe { width:100%; height:100%; border:0; display:block; }
 @media (max-width:720px) { .live { aspect-ratio:4/5; } }
+.nav nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:10px; font-size:.9rem; }
+.nav nav a { white-space:nowrap; padding:7px 14px; border-radius:999px; background:rgba(11,21,34,.7); border:1px solid rgba(255,255,255,.18); text-shadow:none; transition:.15s; }
+.nav nav a:hover { border-color:var(--accent); }
+@media (max-width:720px) {
+  .nav-inner { padding:20px 12px; }
+  .nav nav { justify-content:center; gap:8px; font-size:.85rem; }
+  .nav nav a { padding:6px 12px; }
+}
