@@ -18,6 +18,7 @@ export default async function Home() {
       <header className="nav">
         <div className="nav-inner">
           <nav>
+            <a href="#voli">I Miei Voli</a>
             <a href="#ultime">Ultime Pubblicazioni</a>
             <a href="#pilotlog">Il Pilot Log</a>
             <a href="#podcast">Il Mio Podcast</a>
@@ -44,6 +45,22 @@ export default async function Home() {
           </div>
           </div>
           <Image className="hero-logo" src="/logo.png" alt="Logo RoxPilotLog" width={900} height={900} priority />
+        </section>
+
+        <section id="voli">
+          <h2>I miei voli</h2>
+          <p className="muted">La mappa dei voli che ho fatto e di quelli che ho in programma.</p>
+          <div className="legend">
+            <span><i className="line done" /> Voli fatti</span>
+            <span><i className="line planned" /> Voli pianificati</span>
+          </div>
+          <div className="live map">
+            <iframe src={site.flightsMapUrl} title="Mappa dei miei voli" loading="lazy" tabIndex={-1} />
+            <a className="map-overlay" href={site.flightsMapUrl} target="_blank" rel="noopener noreferrer" aria-label="Apri la mappa dei voli a schermo intero">
+              <span>Apri la mappa →</span>
+            </a>
+          </div>
+          <a className="more" href={site.flightsMapUrl} target="_blank" rel="noopener noreferrer">Apri la mappa a schermo intero →</a>
         </section>
 
         <section id="ultime">

@@ -9,6 +9,7 @@ export const site = {
     { name: "Logbook", url: "https://logbook.rossinisolutions.com/", description: "Gestione logbook smart per noleggiatori ed aerei in comproprietà" },
     { name: "GPX Overfly", url: "https://gpxoverfly.rossinisolutions.com/", description: "Sorvola i tuoi voli pianificati prima di decollare" },
   ],
+  flightsMapUrl: "https://logbook.rossinisolutions.com/public-map/i-kQlnl4YYlmB0BxcAEbqniQLC3DCxKZ",
   channelId: "UCO8OHa7V3ngRAfjzNR25P4g",
   pilotLogPlaylistId: "PLVwu8xWOTXDMzy8DIBlLEr-wYTGGN4EFC",
   // ID della playlist YouTube di "Chiacchiere Sottovento" (https://www.youtube.com/playlist?list=<ID>).
