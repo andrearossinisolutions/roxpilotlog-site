@@ -8,9 +8,9 @@ export const revalidate = 3600;
 
 export default async function Home() {
   const [latest, pilotLog, podcast] = await Promise.all([
-    getChannelVideos(site.channelId, 6),
-    getPlaylistVideos(site.pilotLogPlaylistId, 6),
-    getPlaylistVideos(site.podcastPlaylistId, 6),
+    getChannelVideos(site.channelId, 5),
+    getPlaylistVideos(site.pilotLogPlaylistId, 4),
+    getPlaylistVideos(site.podcastPlaylistId, 4),
   ]);
 
   return (
@@ -49,7 +49,7 @@ export default async function Home() {
 
         <section id="voli">
           <h2>I miei voli</h2>
-          <p className="muted">La mappa dei voli che ho fatto e di quelli che ho in programma.</p>
+          <p className="muted">🗺️ Tutte le rotte che ho volato, dal campo volo ai posti più lontani, e quelle che sto già pianificando per il prossimo decollo.</p>
           <div className="legend">
             <span><i className="line done" /> Voli fatti</span>
             <span><i className="line planned" /> Voli pianificati</span>
@@ -67,11 +67,15 @@ export default async function Home() {
           <h2>Ultime pubblicazioni</h2>
           <LatestCarousel videos={latest.slice(0, 5)} />
           <a className="more" href={site.youtube} target="_blank" rel="noopener noreferrer">Guarda tutti i video →</a>
+          <div className="actions">
+            <a className="btn primary" href={site.youtube} target="_blank" rel="noopener noreferrer">Iscriviti su YouTube</a>
+            <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Seguimi su Instagram</a>
+          </div>
         </section>
 
         <section id="pilotlog">
           <h2>Pilot Log</h2>
-          <p className="muted">I miei voli, dall&apos;inizio. Una puntata dopo l&apos;altra.</p>
+          <p className="muted">🎥 I miei ultimi voli più significativi: paesaggi mozzafiato, e passeggeri speciali. Non perderli!</p>
           <VideoGrid videos={pilotLog} />
           <a className="more" href={`https://www.youtube.com/playlist?list=${site.pilotLogPlaylistId}`} target="_blank" rel="noopener noreferrer">Guarda tutta la playlist →</a>
         </section>
@@ -99,16 +103,20 @@ export default async function Home() {
         <section id="campo">
           <p className="eyebrow">Live</p>
           <h2>Traffico aereo sul campo volo</h2>
-          <p className="muted">Gli aeromobili attorno al mio campo volo in tempo reale, grazie a SafeSky.</p>
+          <p className="muted">🛬 Gli aeromobili attorno al mio campo volo in tempo reale, grazie a SafeSky.</p>
           <div className="live">
             <iframe src={site.safeskyUrl} title="Traffico aereo in tempo reale (SafeSky)" loading="lazy" allowFullScreen />
           </div>
           <a className="more" href={site.safeskyUrl} target="_blank" rel="noopener noreferrer">Apri a schermo intero →</a>
+          <div className="actions">
+            <a className="btn primary" href={site.youtube} target="_blank" rel="noopener noreferrer">Iscriviti su YouTube</a>
+            <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Seguimi su Instagram</a>
+          </div>
         </section>
 
         <section id="progetti">
           <h2>I miei progetti</h2>
-          <p className="muted">Strumenti che ho creato per chi vola.</p>
+          <p className="muted">🛠️ Strumenti che ho creato per chi vola.</p>
           <div className="projects">
             {site.projects.map((p) => (
               <a key={p.url} className="project" href={p.url} target="_blank" rel="noopener noreferrer">
@@ -122,7 +130,7 @@ export default async function Home() {
 
         <section id="contatti" className="contacts">
           <h2>Contatti</h2>
-          <p className="muted">Seguimi sui social e scrivimi un messaggio.</p>
+          <p className="muted">📱 Seguimi sui social e scrivimi un messaggio.</p>
           <div className="actions">
             <a className="btn" href={site.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
