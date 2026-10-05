@@ -42,6 +42,7 @@ export default async function Home() {
           <div className="actions">
             <a className="btn primary" href={site.youtube} target="_blank" rel="noopener noreferrer">Iscriviti su YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Seguimi su Instagram</a>
+            <a className="btn" href={site.tiktok} target="_blank" rel="noopener noreferrer">Guardami su TikTok</a>
           </div>
           </div>
           <Image className="hero-logo" src="/logo.png" alt="Logo RoxPilotLog" width={900} height={900} priority />
@@ -70,6 +71,7 @@ export default async function Home() {
           <div className="actions">
             <a className="btn primary" href={site.youtube} target="_blank" rel="noopener noreferrer">Iscriviti su YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Seguimi su Instagram</a>
+            <a className="btn" href={site.tiktok} target="_blank" rel="noopener noreferrer">Guardami su TikTok</a>
           </div>
         </section>
 
@@ -111,6 +113,7 @@ export default async function Home() {
           <div className="actions">
             <a className="btn primary" href={site.youtube} target="_blank" rel="noopener noreferrer">Iscriviti su YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Seguimi su Instagram</a>
+            <a className="btn" href={site.tiktok} target="_blank" rel="noopener noreferrer">Guardami su TikTok</a>
           </div>
         </section>
 
@@ -134,6 +137,7 @@ export default async function Home() {
           <div className="actions">
             <a className="btn" href={site.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a className="btn" href={site.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>
             <a className="btn" href={site.spotifyUrl} target="_blank" rel="noopener noreferrer">Spotify</a>
           </div>
         </section>

@@ -2,6 +2,7 @@ export const site = {
   name: "RoxPilotLog",
   youtube: "https://www.youtube.com/@RoxPilotLog",
   instagram: "https://www.instagram.com/roxpilotlog/",
+  tiktok: "https://www.tiktok.com/@roxpilotlog",
   spotifyShowId: "1lbtzgmdJ8aFvNBxlDo0Go",
   spotifyUrl: "https://open.spotify.com/show/1lbtzgmdJ8aFvNBxlDo0Go?si=vnZA_sDZSUGqcfwIzCUyeA",
   safeskyUrl: "https://live-next.safesky.app/tv/FqWmtvIOeoo6Kf8tMa1tFA",

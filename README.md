@@ -4,6 +4,7 @@ Sito ufficiale di **RoxPilotLog**, il diario di bordo di un pilota: voli, avvent
 
 - YouTube: https://www.youtube.com/@RoxPilotLog
 - Instagram: https://www.instagram.com/roxpilotlog/
+- TikTok: https://www.tiktok.com/@roxpilotlog
 - Spotify: https://open.spotify.com/show/1lbtzgmdJ8aFvNBxlDo0Go
 
 ## Cosa contiene
