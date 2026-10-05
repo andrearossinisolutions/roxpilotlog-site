@@ -22,6 +22,7 @@ export default async function Home() {
             <a href="#pilotlog">Il Pilot Log</a>
             <a href="#podcast">Il Mio Podcast</a>
             <a href="#campo">Il Campo Volo</a>
+            <a href="#progetti">I Miei Progetti</a>
             <a href="#contatti">Contatti e Social</a>
           </nav>
         </div>
@@ -86,6 +87,20 @@ export default async function Home() {
             <iframe src={site.safeskyUrl} title="Traffico aereo in tempo reale (SafeSky)" loading="lazy" allowFullScreen />
           </div>
           <a className="more" href={site.safeskyUrl} target="_blank" rel="noopener noreferrer">Apri a schermo intero →</a>
+        </section>
+
+        <section id="progetti">
+          <h2>I miei progetti</h2>
+          <p className="muted">Strumenti che ho creato per chi vola.</p>
+          <div className="projects">
+            {site.projects.map((p) => (
+              <a key={p.url} className="project" href={p.url} target="_blank" rel="noopener noreferrer">
+                <h3>{p.name}</h3>
+                <p>{p.description}</p>
+                <span className="more">Apri →</span>
+              </a>
+            ))}
+          </div>
         </section>
 
         <section id="contatti" className="contacts">

@@ -5,6 +5,10 @@ export const site = {
   spotifyShowId: "1lbtzgmdJ8aFvNBxlDo0Go",
   spotifyUrl: "https://open.spotify.com/show/1lbtzgmdJ8aFvNBxlDo0Go?si=vnZA_sDZSUGqcfwIzCUyeA",
   safeskyUrl: "https://live-next.safesky.app/tv/FqWmtvIOeoo6Kf8tMa1tFA",
+  projects: [
+    { name: "Logbook", url: "https://logbook.rossinisolutions.com/", description: "Gestione logbook smart per noleggiatori ed aerei in comproprietà" },
+    { name: "GPX Overfly", url: "https://gpxoverfly.rossinisolutions.com/", description: "Sorvola i tuoi voli pianificati prima di decollare" },
+  ],
   channelId: "UCO8OHa7V3ngRAfjzNR25P4g",
   pilotLogPlaylistId: "PLVwu8xWOTXDMzy8DIBlLEr-wYTGGN4EFC",
   // ID della playlist YouTube di "Chiacchiere Sottovento" (https://www.youtube.com/playlist?list=<ID>).
