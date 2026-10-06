@@ -35,7 +35,7 @@ export default async function Home() {
       <main id="top">
         <section className="hero">
           <div className="hero-text">
-          <p className="eyebrow">Diario di bordo</p>
+          <p className="eyebrow">Andrea Rossini</p>
           <h1>RoxPilotLog</h1>
           <p className="lead">
             Pensavo che volare fosse un beneficio per pochi, e poi…
