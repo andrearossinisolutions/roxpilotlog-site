@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import VideoGrid from "@/components/VideoGrid";
 import LatestCarousel from "@/components/LatestCarousel";
+import NavMenu from "@/components/NavMenu";
 import SideProgress from "@/components/SideProgress";
 
 export const revalidate = 3600;
@@ -19,20 +20,7 @@ export default async function Home() {
     <>
       <header className="nav">
         <div className="nav-inner">
-          <nav>
-            <a href="#voli">I Miei Voli</a>
-            <a href="#ultime">Ultime Pubblicazioni</a>
-            <a href="#pilotlog">Il Pilot Log</a>
-            <div className="dd">
-              <a href="#podcast" aria-haspopup="true">Il Mio Podcast</a>
-              <div className="dd-menu">
-                <Link href="/podcast/ep-1">Ep. 1 – Miami</Link>
-              </div>
-            </div>
-            <a href="#campo">Il Campo Volo</a>
-            <a href="#progetti">I Miei Progetti</a>
-            <a href="#contatti">Contatti e Social</a>
-          </nav>
+          <NavMenu />
         </div>
       </header>
 

@@ -8,7 +8,7 @@ main, .nav, footer { max-width:1100px; margin:0 auto; padding-left:20px; padding
 .logo { font-weight:800; font-size:1.2rem; } .logo span { color:var(--accent); }
 .nav nav { display:flex; gap:20px; font-size:.95rem; color:var(--muted); }
 .nav nav a:hover { color:var(--text); }
-section { padding:56px 0 8px; scroll-margin-top:60px; }
+section { padding:56px 0 8px; scroll-margin-top:110px; }
 .hero { padding-top:72px; padding-bottom:24px; }
 .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:.8rem; font-weight:700; margin:0 0 8px; }
 h1 { font-size:clamp(2.2rem,6vw,4rem); line-height:1.1; margin:0 0 16px; max-width:16ch; }
@@ -39,7 +39,7 @@ h1 { background:var(--grad); -webkit-background-clip:text; background-clip:text;
 .btn.primary { background:var(--grad); border:0; color:#1a1006; }
 @media (max-width:720px) { .hero { grid-template-columns:1fr; } .hero-logo { max-width:340px; margin:0 auto; } }
 
-.nav { max-width:none; padding:0; display:block; position:relative; background:linear-gradient(rgba(11,21,34,.55),rgba(11,21,34,.55)), url("/banner.png") center center / cover no-repeat; border-bottom:1px solid var(--line); }
+.nav { max-width:none; padding:0; display:block; position:sticky; top:0; z-index:30; background:linear-gradient(rgba(11,21,34,.55),rgba(11,21,34,.55)), url("/banner.png") center center / cover no-repeat; border-bottom:1px solid var(--line); }
 .nav-inner { max-width:1100px; margin:0 auto; padding:36px 20px; display:flex; justify-content:flex-end; }
 .nav nav { color:#fff; font-weight:600; text-shadow:0 1px 6px rgba(0,0,0,.7); }
 .nav nav a:hover { color:var(--accent); }
@@ -77,9 +77,6 @@ h1 { background:var(--grad); -webkit-background-clip:text; background-clip:text;
 .dd:hover .dd-menu, .dd:focus-within .dd-menu { display:block; }
 .nav nav .dd-menu a { display:block; background:rgba(11,21,34,.95); border-color:var(--accent); }
 @media (max-width:720px) {
-  .dd { display:contents; }
-  .nav nav .dd > a::after { display:none; }
-  .dd-menu { position:static; padding:0; display:block; }
 }
 .projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:20px; }
 .project { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px; transition:.15s; display:flex; flex-direction:column; gap:6px; }
@@ -139,3 +136,22 @@ section[id], main#top { scroll-margin-top:16px; }
 @media (max-width:720px) { .article .live { aspect-ratio:16/9; } }
 .ep-logo { display:block; width:min(400px,100%); height:auto; margin:40px auto 24px; filter:drop-shadow(0 10px 40px rgba(255,107,107,.25)); }
 .article .actions { justify-content:center; }
+
+.burger, .drawer-close, .scrim { display:none; }
+@media (max-width:720px) {
+  .nav { backdrop-filter:none; }
+  .nav-inner { justify-content:flex-end; padding:14px 16px; }
+  .burger { display:flex; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; padding:0 11px; border-radius:12px; background:rgba(11,21,34,.7); border:1px solid rgba(255,255,255,.18); cursor:pointer; }
+  .burger span { height:2px; background:#fff; border-radius:2px; }
+  .scrim { display:block; position:fixed; inset:0; background:rgba(0,0,0,.55); opacity:0; pointer-events:none; transition:.2s; z-index:40; }
+  .scrim.open { opacity:1; pointer-events:auto; }
+  .nav nav#main-nav { position:fixed; top:0; right:0; bottom:0; width:min(82vw,320px); flex-direction:column; flex-wrap:nowrap; justify-content:flex-start; align-items:stretch; gap:4px; padding:64px 16px 24px; background:var(--bg); border-left:1px solid var(--line); transform:translateX(100%); transition:transform .25s; z-index:50; overflow-y:auto; font-size:1rem; }
+  .nav nav#main-nav.open { transform:none; }
+  .nav nav#main-nav a { background:none; border:0; border-radius:10px; padding:12px 14px; white-space:normal; }
+  .nav nav#main-nav a:hover, .nav nav#main-nav a:active { background:rgba(255,255,255,.08); }
+  .nav nav#main-nav .dd { display:block; }
+  .nav nav#main-nav .dd > a::after { display:none; }
+  .nav nav#main-nav .dd-menu { position:static; display:block; padding:0 0 0 18px; }
+  .nav nav#main-nav .dd-menu a { background:none; border:0; border-left:2px solid var(--accent); border-radius:0 10px 10px 0; color:var(--muted); font-size:.95rem; }
+  .drawer-close { display:block; position:absolute; top:10px; right:12px; width:40px; height:40px; background:none; border:0; color:#fff; font-size:2rem; line-height:1; cursor:pointer; }
+}
