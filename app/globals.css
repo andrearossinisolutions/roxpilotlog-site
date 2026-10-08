@@ -107,3 +107,24 @@ section[id], main#top { scroll-margin-top:16px; }
 @media (max-width:900px) { .sp-label, .sp-next span { display:none; } .side-progress { right:8px; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .sp-next svg { animation:none; } }
 .side-progress li.on .sp-label { background:linear-gradient(90deg, rgba(255,138,61,.55) var(--p,0%), rgba(11,21,34,.85) var(--p,0%)); border-color:var(--accent); }
+
+/* episode page */
+.article { max-width:760px; }
+.article section { padding-top:40px; }
+.article p { font-size:1.05rem; }
+.article .ep-hero { padding-top:48px; }
+.article h1 { font-size:clamp(1.9rem,5vw,2.8rem); line-height:1.15; margin:0 0 16px; }
+.ep-cover, .ep-figure img { width:100%; height:auto; border-radius:14px; border:1px solid var(--line); display:block; margin-top:24px; }
+.ep-figure { margin:24px 0; }
+.ep-figure img { margin-top:0; }
+.ep-causes { padding-left:0; list-style:none; counter-reset:c; display:grid; gap:12px; }
+.ep-causes li { counter-increment:c; position:relative; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 16px 14px 56px; }
+.ep-causes li::before { content:counter(c); position:absolute; left:16px; top:14px; width:28px; height:28px; border-radius:50%; background:var(--grad); color:#1a1006; font-weight:800; display:grid; place-items:center; }
+.ep-quote { border-left:4px solid var(--accent); padding:4px 0 4px 18px; font-size:1.15rem; }
+.ep-takeaways { display:grid; gap:16px; margin:20px 0; }
+.ep-takeaways > div { display:flex; gap:16px; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px; }
+.ep-takeaways > div p { margin:0; }
+.ep-takeaways span { flex:none; width:36px; height:36px; border-radius:50%; background:var(--grad); color:#1a1006; font-weight:800; display:grid; place-items:center; }
+@media (max-width:720px) { .article .live { aspect-ratio:16/9; } }
+.ep-logo { display:block; width:min(400px,100%); height:auto; margin:40px auto 24px; filter:drop-shadow(0 10px 40px rgba(255,107,107,.25)); }
+.article .actions { justify-content:center; }

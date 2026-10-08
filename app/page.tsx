@@ -1,6 +1,7 @@
 import { site } from "@/lib/config";
 import { getChannelVideos, getPlaylistVideos } from "@/lib/youtube";
 import Image from "next/image";
+import Link from "next/link";
 import VideoGrid from "@/components/VideoGrid";
 import LatestCarousel from "@/components/LatestCarousel";
 import SideProgress from "@/components/SideProgress";
@@ -95,8 +96,9 @@ export default async function Home() {
               src={`https://open.spotify.com/embed/show/${site.spotifyShowId}`}
               height="352" loading="lazy" allow="encrypted-media; clipboard-write; fullscreen"
             />
-            <div>
-              <a className="btn primary" href={site.spotifyUrl} target="_blank" rel="noopener noreferrer">Ascolta su Spotify</a>
+            <div className="actions">
+              <Link className="btn primary" href="/podcast/ep-1">Leggi l'episodio 1</Link>
+              <a className="btn" href={site.spotifyUrl} target="_blank" rel="noopener noreferrer">Ascolta su Spotify</a>
               {site.podcastPlaylistId && (
                 <a className="btn" href={`https://www.youtube.com/playlist?list=${site.podcastPlaylistId}`} target="_blank" rel="noopener noreferrer">Playlist su YouTube</a>
               )}

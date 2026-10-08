@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const sections = [
+export type ProgressSection = { id: string; label: string };
+
+const homeSections: ProgressSection[] = [
   { id: "top", label: "Intro" },
   { id: "voli", label: "I miei voli" },
   { id: "ultime", label: "Ultime pubblicazioni" },
@@ -15,7 +17,7 @@ const sections = [
 
 const IDLE_MS = 10000;
 
-export default function SideProgress() {
+export default function SideProgress({ sections = homeSections, autoAdvance = true }: { sections?: ProgressSection[]; autoAdvance?: boolean }) {
   const [active, setActive] = useState(0);
   const asideRef = useRef<HTMLElement>(null);
   const activeRef = useRef(0);
@@ -36,7 +38,7 @@ export default function SideProgress() {
       const dt = Math.min(now - prev, 100);
       prev = now;
       const i = activeRef.current;
-      elapsed.current += dt;
+      elapsed.current += autoAdvance ? dt : 0;
       if (elapsed.current >= IDLE_MS) {
         elapsed.current = 0;
         const target = sections[(i + 1) % sections.length].id;
@@ -50,7 +52,7 @@ export default function SideProgress() {
       cancelAnimationFrame(raf);
       events.forEach((e) => window.removeEventListener(e, reset));
     };
-  }, []);
+  }, [sections, autoAdvance]);
 
   useEffect(() => {
     const update = () => {
@@ -70,7 +72,7 @@ export default function SideProgress() {
       window.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
     };
-  }, []);
+  }, [sections]);
 
   const next = sections[(active + 1) % sections.length];
 
