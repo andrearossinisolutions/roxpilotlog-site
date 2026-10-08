@@ -4,13 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const items = [
-  { href: "#voli", label: "I Miei Voli" },
-  { href: "#ultime", label: "Ultime Pubblicazioni" },
-  { href: "#pilotlog", label: "Il Pilot Log" },
+  { href: "#ultime", label: "I Miei Video" },
   { href: "#podcast", label: "Il Mio Podcast", sub: [{ href: "/podcast/ep-1", label: "Ep. 1 – Miami" }] },
-  { href: "#campo", label: "Il Campo Volo" },
-  { href: "#progetti", label: "I Miei Progetti" },
-  { href: "#contatti", label: "Contatti e Social" },
+  { href: "#contatti", label: "Contatti" },
 ];
 
 export default function NavMenu() {

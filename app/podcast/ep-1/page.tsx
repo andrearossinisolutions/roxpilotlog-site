@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/config";
 import { getPlaylistVideos } from "@/lib/youtube";
+import SiteBrand from "@/components/SiteBrand";
 import SideProgress, { type ProgressSection } from "@/components/SideProgress";
 
 export const revalidate = 3600;
@@ -32,6 +33,7 @@ export default async function Episode1() {
     <>
       <header className="nav">
         <div className="nav-inner">
+          <SiteBrand />
           <nav>
             <Link href="/">← Torna al sito</Link>
             <a href={playlistUrl} target="_blank" rel="noopener noreferrer">Guarda su YouTube</a>

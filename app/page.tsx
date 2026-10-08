@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import VideoGrid from "@/components/VideoGrid";
 import LatestCarousel from "@/components/LatestCarousel";
+import SiteBrand from "@/components/SiteBrand";
 import NavMenu from "@/components/NavMenu";
 import SideProgress from "@/components/SideProgress";
 
@@ -20,6 +21,7 @@ export default async function Home() {
     <>
       <header className="nav">
         <div className="nav-inner">
+          <SiteBrand />
           <NavMenu />
         </div>
       </header>
@@ -131,12 +133,13 @@ export default async function Home() {
 
         <section id="contatti" className="contacts">
           <h2>Contatti</h2>
-          <p className="muted">📱 <b>Seguimi sui social</b> e scrivimi un messaggio.</p>
+          <p className="muted">📱 <b>Seguimi sui social</b> e mandami un messaggio, oppure scrivimi a <a className="more" href={`mailto:${site.email}`}>{site.email}</a>.</p>
           <div className="actions">
             <a className="btn" href={site.youtube} target="_blank" rel="noopener noreferrer">YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
             <a className="btn" href={site.tiktok} target="_blank" rel="noopener noreferrer">TikTok</a>
             <a className="btn" href={site.spotifyUrl} target="_blank" rel="noopener noreferrer">Spotify</a>
+            <a className="btn primary" href={`mailto:${site.email}`}>✉️ Scrivimi una mail</a>
           </div>
         </section>
       </main>
