@@ -70,6 +70,17 @@ h1 { background:var(--grad); -webkit-background-clip:text; background-clip:text;
   .nav nav { justify-content:center; gap:8px; font-size:.85rem; }
   .nav nav a { padding:6px 12px; }
 }
+.dd { position:relative; display:flex; }
+.nav nav .dd > a::after { content:""; display:inline-block; width:6px; height:6px; margin:0 0 3px 8px; border-right:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg); transition:.15s; }
+.dd:hover > a::after, .dd:focus-within > a::after { transform:rotate(225deg); margin-bottom:-2px; }
+.dd-menu { position:absolute; top:100%; left:0; padding-top:8px; display:none; z-index:20; }
+.dd:hover .dd-menu, .dd:focus-within .dd-menu { display:block; }
+.nav nav .dd-menu a { display:block; background:rgba(11,21,34,.95); border-color:var(--accent); }
+@media (max-width:720px) {
+  .dd { display:contents; }
+  .nav nav .dd > a::after { display:none; }
+  .dd-menu { position:static; padding:0; display:block; }
+}
 .projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:20px; }
 .project { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px; transition:.15s; display:flex; flex-direction:column; gap:6px; }
 .project:hover { transform:translateY(-3px); border-color:var(--accent); }

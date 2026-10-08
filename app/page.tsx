@@ -23,7 +23,12 @@ export default async function Home() {
             <a href="#voli">I Miei Voli</a>
             <a href="#ultime">Ultime Pubblicazioni</a>
             <a href="#pilotlog">Il Pilot Log</a>
-            <a href="#podcast">Il Mio Podcast</a>
+            <div className="dd">
+              <a href="#podcast" aria-haspopup="true">Il Mio Podcast</a>
+              <div className="dd-menu">
+                <Link href="/podcast/ep-1">Ep. 1 – Miami</Link>
+              </div>
+            </div>
             <a href="#campo">Il Campo Volo</a>
             <a href="#progetti">I Miei Progetti</a>
             <a href="#contatti">Contatti e Social</a>
