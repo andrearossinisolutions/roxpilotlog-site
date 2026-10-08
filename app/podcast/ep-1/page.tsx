@@ -9,6 +9,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Chiacchiere Sottovento Ep. 1 – Miami | RoxPilotLog",
+  alternates: { canonical: "/podcast/ep-1" },
   description: "Dal caso Amazon Prime Air alle nostre decisioni in cabina: cosa possiamo portarci a casa, noi piloti di aerei leggeri.",
 };
 

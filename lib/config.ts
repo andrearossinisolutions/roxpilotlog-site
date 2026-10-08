@@ -1,5 +1,6 @@
 export const site = {
   name: "RoxPilotLog",
+  url: "https://roxpilotlog.rossinisolutions.com",
   youtube: "https://www.youtube.com/@RoxPilotLog",
   instagram: "https://www.instagram.com/roxpilotlog/",
   tiktok: "https://www.tiktok.com/@roxpilotlog",
