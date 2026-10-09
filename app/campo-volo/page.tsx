@@ -43,11 +43,14 @@ export default function CampoVolo() {
         <section id="pista">
           <h2>Info pista</h2>
           <ul className="field-info">
-            <li>🛬 <b>Pista in erba</b> di 380 m, orientamento <b>16 / 34</b></li>
-            <li>🔁 <b>Circuiti standard SX</b> a 1000 ft QNH</li>
+            <li>📐 <b>Pista in erba</b> di 380 m, orientamento <b>16 / 34</b></li>
             <li>⛰️ <b>Altitudine pista:</b> 253 ft</li>
+            <li>🔁 <b>Circuiti standard SX</b> a 1000 ft QNH</li>
+            <li>↗️ <b>Verticale pista</b> a 1500 ft QNH</li>
+            <li>📍 <b>Punti di riporto per l'avvicinamento:</b> N1 (Spino/Pandino), E1 (Monte Cremasco), S1 (Sud Dovera), W1(Fracchia/Fracina). 🗺️ Consultare le mappe AvioPortolano</li>
             <li>🅿️ <b>Parcheggio</b> sul piazzale in erba sempre disponibile</li>
-            <li>🏠 <b>Hangar:</b> difficile, ma consiglio di sentire comunque il gestore al bisogno</li>
+            <li>🏠 <b>Hangar:</b> difficile, ma consiglio di sentire comunque il gestore al bisogno. 📞 Contatti su AvioPortolano</li>
+            <li>🍝 <b>Pranzo nei weekend</b> quasi sempre disponibile, consigliata prenotazione. 📞 Contatti su AvioPortolano</li>
           </ul>
         </section>
 
