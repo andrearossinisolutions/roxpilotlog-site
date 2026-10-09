@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Chiacchiere Sottovento Ep. 1 – Miami | RoxPilotLog",
   alternates: { canonical: "/podcast/ep-1" },
-  description: "Dal caso Amazon Prime Air alle nostre decisioni in cabina: cosa possiamo portarci a casa, noi piloti di aerei leggeri.",
+  description: "Incidente aereo di MIAMI: Una lezione per NOI piccoli piloti? - Chiacchiere Sottovento Ep. 1",
 };
 
 const sections: ProgressSection[] = [
@@ -47,7 +47,7 @@ export default async function Episode1() {
       <main id="top" className="article">
         <section className="ep-hero">
           <p className="eyebrow">Chiacchiere Sottovento · Episodio 1</p>
-          <h1>Dal caso Amazon Prime Air alle nostre decisioni in cabina</h1>
+          <h1>Incidente aereo di MIAMI: Una lezione per NOI piccoli piloti?</h1>
           <p className="lead">
             Ciao a tutti, mi chiamo Andrea, sono un pilota VDS, e volo un Savannah basato ad est di Milano. L'estate è ormai alle spalle, e quindi con il video di oggi voglio provare a fare quattro chiacchiere con voi riguardo un avvenimento che mi ha fatto pensare. Fatemi sapere poi se vi piace!
           </p>
