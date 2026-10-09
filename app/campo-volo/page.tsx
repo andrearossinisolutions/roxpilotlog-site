@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/config";
 import SiteBrand from "@/components/SiteBrand";
+import OfficialSheet, { SheetLink } from "@/components/OfficialSheet";
 import SideProgress, { type ProgressSection } from "@/components/SideProgress";
 
 export const metadata: Metadata = {
@@ -38,6 +39,7 @@ export default function CampoVolo() {
           <p className="eyebrow">Il mio campo volo</p>
           <h1>Vieni a trovarmi a Dovera</h1>
           <p className="lead">Tutto quello che ti serve per organizzare una visita: informazioni sulla pista, meteo del weekend e traffico aereo in tempo reale.</p>
+          <Image src="/dovera-map.webp" alt="Cartina aeronautica con la posizione del campo volo JFK Dovera Airfield" width={2000} height={1148} priority style={{ width: "100%", height: "auto", borderRadius: 12, marginTop: 24 }} />
         </section>
 
         <section id="pista">
@@ -47,11 +49,13 @@ export default function CampoVolo() {
             <li>⛰️ <b>Altitudine pista:</b> 253 ft</li>
             <li>🔁 <b>Circuiti standard SX</b> a 1000 ft QNH</li>
             <li>↗️ <b>Verticale pista</b> a 1500 ft QNH</li>
-            <li>📍 <b>Punti di riporto per l'avvicinamento:</b> N1 (Spino/Pandino), E1 (Monte Cremasco), S1 (Sud Dovera), W1(Fracchia/Fracina). 🗺️ Consultare le mappe AvioPortolano</li>
+            <li>📍 <b>Punti di riporto per l'avvicinamento:</b> N1 (Spino/Pandino), E1 (Monte Cremasco), S1 (Sud Dovera), W1(Fracchia/Fracina). <SheetLink sheet="chart">🗺️ Consultare la mappa AvioPortolano</SheetLink></li>
             <li>🅿️ <b>Parcheggio</b> sul piazzale in erba sempre disponibile</li>
-            <li>🏠 <b>Hangar:</b> difficile, ma consiglio di sentire comunque il gestore al bisogno. 📞 Contatti su AvioPortolano</li>
-            <li>🍝 <b>Pranzo nei weekend</b> quasi sempre disponibile, consigliata prenotazione. 📞 Contatti su AvioPortolano</li>
+            <li>🏠 <b>Hangar:</b> difficile, ma consiglio di sentire comunque il gestore al bisogno. <SheetLink sheet="scheda">📞 Contatti sulla scheda AvioPortolano</SheetLink> o qui sotto</li>
+            <li>🍝 <b>Pranzo nei weekend</b> quasi sempre disponibile, consigliata prenotazione. <SheetLink sheet="scheda">📞 Contatti sulla scheda AvioPortolano</SheetLink> o qui sotto</li>
+            <li>⚠️ <b>Pista 09/27, di 200 m, solo per paramotore</b> e simili!</li>
           </ul>
+          <OfficialSheet />
         </section>
 
         <section id="webcam">

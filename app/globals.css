@@ -17,6 +17,7 @@ h2 { font-size:1.8rem; margin:0 0 8px; }
 .muted { color:var(--muted); }
 .actions { display:flex; flex-wrap:wrap; gap:12px; margin:20px 0; }
 .btn { display:inline-block; padding:11px 20px; border-radius:999px; border:1px solid var(--line); font-weight:600; transition:.15s; }
+.btn { cursor:pointer; }
 .btn:hover { border-color:var(--accent); }
 .btn.primary { background:var(--accent); border-color:var(--accent); color:#1a1006; }
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:18px; margin-top:20px; }
@@ -208,3 +209,7 @@ section[id], main#top { scroll-margin-top:16px; }
 .field-info li { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 18px; }
 .field-outro { text-align:center; padding-top:72px; padding-bottom:24px; }
 .field-outro img { width:120px; height:auto; margin:0 auto 12px; display:block; }
+.sheet-overlay { position:fixed; inset:0; z-index:100; background:rgba(0,0,0,.85); display:flex; align-items:flex-start; justify-content:center; overflow:auto; padding:56px 16px 24px; }
+.sheet-overlay img { width:100%; max-width:900px; height:auto; background:#fff; border-radius:8px; }
+.sheet-close { position:fixed; top:12px; right:16px; width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,.3); background:rgba(11,21,34,.9); color:#fff; font-size:1.1rem; cursor:pointer; }
+.inline-link { background:none; border:0; padding:0; font:inherit; color:var(--accent); text-decoration:underline; cursor:pointer; }
