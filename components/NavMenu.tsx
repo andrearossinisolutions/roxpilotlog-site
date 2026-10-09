@@ -6,6 +6,7 @@ import Link from "next/link";
 const items = [
   { href: "#ultime", label: "I Miei Video" },
   { href: "#podcast", label: "Il Mio Podcast", sub: [{ href: "/podcast/ep-1", label: "Ep. 1 – Miami" }] },
+  { href: "#campo", label: "Il Mio Campo Volo", sub: [{ href: "/campo-volo", label: "Radar, meteo e info pista" }] },
   { href: "#contatti", label: "Contatti" },
 ];
 

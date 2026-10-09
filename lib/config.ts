@@ -8,6 +8,7 @@ export const site = {
   email: "andrea@rossinisolutions.com",
   spotifyUrl: "https://open.spotify.com/show/1lbtzgmdJ8aFvNBxlDo0Go?si=vnZA_sDZSUGqcfwIzCUyeA",
   safeskyUrl: "https://live-next.safesky.app/tv/FqWmtvIOeoo6Kf8tMa1tFA",
+  weekendWeatherUrl: "https://logbook.rossinisolutions.com/embed/weekend-weather/IoXXMj2jLnvaUGCqpZYvjKEkOa10mu9I",
   projects: [
     { name: "Logbook", url: "https://logbook.rossinisolutions.com/", description: "Gestione logbook smart per noleggiatori ed aerei in comproprietà" },
     { name: "GPX Overfly", url: "https://gpxoverfly.rossinisolutions.com/", description: "Sorvola i tuoi voli pianificati prima di decollare" },

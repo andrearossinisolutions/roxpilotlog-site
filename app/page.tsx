@@ -117,18 +117,12 @@ export default async function Home() {
         </section>
 
         <section id="campo">
-          <p className="eyebrow">Live</p>
-          <h2>Traffico aereo sul campo volo</h2>
-          <p className="muted">🛬 <b>Gli aeromobili attorno al mio campo volo</b> in tempo reale, grazie a SafeSky.</p>
-          <div className="live clickable">
-            <iframe src={site.safeskyUrl} title="Traffico aereo in tempo reale (SafeSky)" loading="lazy" tabIndex={-1} />
-            <a className="map-overlay" href={site.safeskyUrl} target="_blank" rel="noopener noreferrer" aria-label="Apri il radar del campo volo a schermo intero">
-              <span>Apri il radar →</span>
-            </a>
-          </div>
-          <a className="more" href={site.safeskyUrl} target="_blank" rel="noopener noreferrer">Apri a schermo intero →</a>
+          <p className="eyebrow">Il mio campo volo</p>
+          <h2>Vieni a trovarmi a Dovera</h2>
+          <p className="muted">🛬 Pista in erba, circuito standard e parcheggio sempre disponibile: qui trovi <b>radar del traffico in tempo reale</b>, <b>meteo del weekend</b> e tutte le info per venirmi a trovare.</p>
           <div className="actions">
-            <a className="btn primary" href={site.youtube} target="_blank" rel="noopener noreferrer">Iscriviti su YouTube</a>
+            <Link className="btn primary" href="/campo-volo">Scopri il campo volo</Link>
+            <a className="btn" href={site.youtube} target="_blank" rel="noopener noreferrer">Iscriviti su YouTube</a>
             <a className="btn" href={site.instagram} target="_blank" rel="noopener noreferrer">Seguimi su Instagram</a>
             <a className="btn" href={site.tiktok} target="_blank" rel="noopener noreferrer">Guardami su TikTok</a>
           </div>
