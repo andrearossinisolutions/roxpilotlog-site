@@ -120,8 +120,11 @@ export default async function Home() {
           <p className="eyebrow">Live</p>
           <h2>Traffico aereo sul campo volo</h2>
           <p className="muted">🛬 <b>Gli aeromobili attorno al mio campo volo</b> in tempo reale, grazie a SafeSky.</p>
-          <div className="live">
-            <iframe src={site.safeskyUrl} title="Traffico aereo in tempo reale (SafeSky)" loading="lazy" allowFullScreen />
+          <div className="live clickable">
+            <iframe src={site.safeskyUrl} title="Traffico aereo in tempo reale (SafeSky)" loading="lazy" tabIndex={-1} />
+            <a className="map-overlay" href={site.safeskyUrl} target="_blank" rel="noopener noreferrer" aria-label="Apri il radar del campo volo a schermo intero">
+              <span>Apri il radar →</span>
+            </a>
           </div>
           <a className="more" href={site.safeskyUrl} target="_blank" rel="noopener noreferrer">Apri a schermo intero →</a>
           <div className="actions">
