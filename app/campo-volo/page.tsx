@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 const sections: ProgressSection[] = [
   { id: "top", label: "Il campo volo" },
   { id: "pista", label: "Info pista" },
+  { id: "webcam", label: "Webcam" },
   { id: "meteo", label: "Meteo weekend" },
   { id: "radar", label: "Radar" },
 ];
@@ -48,6 +49,14 @@ export default function CampoVolo() {
             <li>🅿️ <b>Parcheggio</b> sul piazzale in erba sempre disponibile</li>
             <li>🏠 <b>Hangar:</b> difficile, ma consiglio di sentire comunque il gestore al bisogno</li>
           </ul>
+        </section>
+
+        <section id="webcam">
+          <h2>Webcam sul campo</h2>
+          <p className="muted">📹 <b>Guarda il campo volo in diretta</b> e controlla com'è la situazione prima di partire.</p>
+          <div className="live">
+            <iframe src={site.webcamUrl} title="Webcam del campo volo" loading="lazy" allow="fullscreen" allowFullScreen />
+          </div>
         </section>
 
         <section id="meteo">
