@@ -6,6 +6,7 @@ export type ProgressSection = { id: string; label: string };
 
 const homeSections: ProgressSection[] = [
   { id: "top", label: "Intro" },
+  { id: "chi-sono", label: "Chi sono" },
   { id: "voli", label: "I miei voli" },
   { id: "ultime", label: "Ultime pubblicazioni" },
   { id: "pilotlog", label: "Pilot Log" },

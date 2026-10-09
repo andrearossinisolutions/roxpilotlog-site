@@ -47,6 +47,20 @@ export default async function Home() {
           <Image className="hero-logo" src="/logo.png" alt="Logo RoxPilotLog" width={900} height={900} priority />
         </section>
 
+        <section id="chi-sono" className="about">
+          <h2>Ciao a tutti!</h2>
+          <p>
+            Mi chiamo <b>Andrea</b>, sono un <b>pilota VDS</b>, e volo un <b>Savannah</b> basato ad est di Milano. ✈️
+          </p>
+          <p>
+            Sul mio canale, e su questo sito, racconto le mie <b>avventure in giro per l'Italia</b>: troverai il racconto di voli emozionanti, avventure e sventure aeronautiche, passeggeri speciali, paesaggi mozzafiato, e tutto quello che si impara volando con un aereo ultraleggero.
+          </p>
+          <p>
+            Trovi i miei <b>video di volo</b> su YouTube, ed il nuovo podcast <b>Chiacchiere Sottovento</b>, in cui parliamo di attualità aeronautica direttamente dal campo volo.
+            Buona visione, e cieli sereni! 🛩️☀️
+          </p>
+        </section>
+
         <section id="voli">
           <h2>I miei voli</h2>
           <p className="muted">🗺️ <b>Tutte le rotte che ho volato</b>, dal campo volo ai posti più lontani, e quelle che sto già pianificando per il prossimo decollo.</p>
